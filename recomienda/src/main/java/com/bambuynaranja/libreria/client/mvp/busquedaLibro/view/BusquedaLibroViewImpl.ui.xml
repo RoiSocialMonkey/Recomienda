@@ -1,0 +1,71 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:b="urn:import:org.gwtbootstrap3.client.ui">
+	<g:HTMLPanel>
+	    <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr />
+                    <h2 class="intro-text text-center"><strong>Búsqueda Libros</strong>
+                    </h2>
+                    <hr />
+                    <form role="form">
+                          <div class="row">
+                            <div class="form-group col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <label>Título</label>
+                                <b:TextBox name="titulo" styleName="form-control" ui:field="tituloTextBox" allowBlank="true"/>
+                            </div>
+                            <div class="form-group col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <label>Autor</label>
+                                <b:TextBox name="autor" styleName="form-control" ui:field="autorTextBox" allowBlank="true"/>
+                            </div>
+                            <div class="form-group col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            	<label>Año 1ª publicación</label>
+                            	<b:TextBox name="anho1Pub" styleName="form-control" ui:field="anho1PublicacionTextBox" allowBlank="true"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-lg-12">
+                                <b:Button ui:field="buscarButton" styleName="btn btn-default" text="Buscar" />
+                            </div>
+                        </div>                        
+                    </form>
+                    <div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 bg-primary">
+                        	Autor
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 bg-primary">
+                            Título
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 bg-primary">
+                           Año 1ª publicación
+                        </div>                        	
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
+                        	Cervantes
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
+                            El quijote
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
+                           1612
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
+                        	Cervantes
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
+                            El quijote
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                           1612
+                        </div>
+                    </div>
+                </div>
+            </div>
+	    </div>
+	</g:HTMLPanel>
+</ui:UiBinder>
