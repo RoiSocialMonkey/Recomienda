@@ -18,7 +18,7 @@ public class IndexedDbWrapper {
 	public static native void openDatabase(Callback<JavaScriptObject,Void> callback)/*-{
 	
 		// Let us open our database
-		var request = window.indexedDB.open("RecomiendaApp", 3);
+		var request = window.indexedDB.open("RecomiendaApp", 4);
 		
 		request.onerror = function(event) {
   			// Do something with request.errorCode!
@@ -36,10 +36,21 @@ public class IndexedDbWrapper {
 		request.onupgradeneeded = function(event) { 
   			var db = event.target.result;
 			
-			db.deleteObjectStore("libro");
+		
+			var existeLibroObjectStore = false;
+			
+			//db.deleteObjectStore("libro");
+			
+			$wnd.$(db.objectStoreNames).each(function (index,element) {
+				if(element == "libro"){
+					existeLibroObjectStore = true;
+				}
+			});
 
-  			// Create an objectStore for this database
-  			var objectStore = db.createObjectStore("libro", { autoIncrement : true });
+			if(!existeLibroObjectStore){
+  				// Create an objectStore for this database
+  				var objectStore = db.createObjectStore("libro", { autoIncrement : true });
+  			}
   		};
 		
 	}-*/;
